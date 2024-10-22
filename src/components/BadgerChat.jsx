@@ -23,8 +23,7 @@ export default function App() {
   const [guest, setGuest] = useState(false);
 
   useEffect(() => {
-    // hmm... maybe I should load the chatroom names here
-    //fetch all chatroom here
+
     fetch("https://cs571.org/api/f23/hw9/chatrooms",{
       headers: {
         "X-CS571-ID": CS571.getBadgerId(),
@@ -35,13 +34,13 @@ export default function App() {
   }, []);
 
   function handleLogin(username, password) {
-    // hmm... maybe this is helpful!
-    setIsLoggedIn(true); // I should really do a fetch to login first!
+    
+    setIsLoggedIn(true); 
   }
 
   function handleSignup(username, password) {
-    // hmm... maybe this is helpful!
-    setIsLoggedIn(true); // I should really do a fetch to register first!
+
+    setIsLoggedIn(true); 
   }
 
   if (isLoggedIn) {
